@@ -5,21 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Jide-Jegede Tirenioluwa's Portfolio">
   <title>Jide-Jegede Tirenioluwa Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
     section {
       padding: 50px;
       text-align: left;
       max-width: 1000px;
       margin: 0 auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
     #intro {
       background: #f0f0f0;
+      text-align: center;
     }
     #about, #projects, #contact {
       background: #ffffff;
@@ -55,13 +61,36 @@
       padding: 20px;
       text-align: center;
     }
+    .project {
+      margin-bottom: 30px;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      padding: 20px;
+      transition: box-shadow 0.3s ease;
+    }
+    .project:hover {
+      box-shadow: 0 4px 20px rgba(0, 115, 230, 0.2);
+    }
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .contact-icons a {
+      color: #fff;
+      font-size: 24px;
+      transition: transform 0.3s;
+    }
+    .contact-icons a:hover {
+      transform: scale(1.2);
+    }
   </style>
 </head>
 <body>
 
   <section id="intro">
-    <h1> Jide-Jegede Tirenioluwa </h1>
-    <p> Personal Portfolio! </p>
+    <h1>Jide-Jegede Tirenioluwa</h1>
+    <p>Personal Portfolio!</p>
     <!-- <a href="#projects">See My Work</a> -->
   </section>
 
@@ -77,13 +106,13 @@
       <li>CI/CD tools (GitHub Actions, Jenkins)</li>
     </ul>
     <p>I believe in Jesus as my Lord and Savior, but that doesn't mean I leave everything to Him—I like to prove my faith through my works.</p>
-    <p>I'm proficient in Python and Golang, and enjoy solving data structures and algorithm problems. You can check out my LeetCode solutions <a href="your-leetcode-link-here">here</a>.</p>
+    <p>I'm proficient in Python and Golang and enjoy solving data structures and algorithm problems. You can check out my LeetCode solutions <a href="your-leetcode-link-here">here</a>.</p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
-      <h3>Emart ecommerce webapp</h3>
+      <h3>Emart E-commerce Webapp</h3>
       <p>Constructed a full DevOps Lifecycle on the Emart web application, deploying using cloud technologies and implementing CI/CD pipelines.</p>
       <p>Check out the Git repository for more information:</p>
       <a href="https://github.com/Jidetireni/emartapp.git">View Project</a>
@@ -93,7 +122,11 @@
   <section id="contact">
     <h2>Contact Me</h2>
     <p>Feel free to reach out if you're interested in working together!</p>
-    <a href="mailto:Jtirenipraise@gmail.com">Send an Email</a>
+    <div class="contact-icons">
+      <a href="mailto:Jtirenipraise@gmail.com" title="Send an Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/jidetireni" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/jide-jegede-tirenioluwa-088799220/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
   </section>
 
   <footer>
@@ -101,6 +134,26 @@
     <a href="https://github.com/jidetireni">GitHub</a> |
     <a href="https://www.linkedin.com/in/jide-jegede-tirenioluwa-088799220/">LinkedIn</a>
   </footer>
+
+  <script>
+    // Fade-in effect for sections
+    document.addEventListener('DOMContentLoaded', function () {
+      const sections = document.querySelectorAll('section');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
 
 </body>
 </html>
