@@ -10,12 +10,13 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
     }
     section {
       padding: 50px;
-      text-align: left; /* Changed text alignment to left */
+      text-align: left;
       max-width: 1000px;
-      margin: 0 auto; /* Align the sections in the middle of the page */
+      margin: 0 auto;
     }
     #intro {
       background: #f0f0f0;
@@ -25,14 +26,28 @@
     }
     h1, h2 {
       color: #333;
-      text-align: left; /* Align headers to the left */
+      text-align: left;
+    }
+    h2 {
+      border-bottom: 2px solid #0073e6;
+      padding-bottom: 10px;
     }
     p {
-      text-align: justify; /* Justify paragraph text */
+      text-align: justify;
+    }
+    ul {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
     }
     a {
       color: #0073e6;
       text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
     footer {
       background: #333;
@@ -45,38 +60,46 @@
 <body>
 
   <section id="intro">
-    <h1>Hi, I'm Jide-Jegede Tirenioluwa</h1>
-    <p>A DevOps Engineer with a passion for automation, cloud computing, and infrastructure as code.</p>
-    <a href="#projects">See My Work</a>
+    <h1> Jide-Jegede Tirenioluwa </h1>
+    <p> Personal Portfolio! </p>
+    <!-- <a href="#projects">See My Work</a> -->
   </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I'm a DevOps Engineer with an academic background in Electrical and Information Engineering. I have solid foundations in system administration, networking, and programming.</p>
+    <p>I'm a DevOps Engineer with an academic background in Electrical and Information Engineering. I have solid foundations in:</p>
+    <ul>
+      <li>System administration</li>
+      <li>Networking</li>
+      <li>Programming</li>
+      <li>Cloud computing technologies (primarily AWS)</li>
+      <li>Containerization tools (Docker, Kubernetes)</li>
+      <li>CI/CD tools (GitHub Actions, Jenkins)</li>
+    </ul>
     <p>I believe in Jesus as my Lord and Savior, but that doesn't mean I leave everything to Him—I like to prove my faith through my works.</p>
-    <p>I work with cloud computing technologies, primarily AWS, and containerization tools like Docker and Kubernetes. I program in Python and Golang, and I'm experienced with CI/CD tools such as GitHub Actions and Jenkins.</p>
-    <p>I also enjoy solving data structures and algorithm problems. You can check out my LeetCode solutions <a href="your-leetcode-link-here">here</a>.</p>
-  </section>  
+    <p>I'm proficient in Python and Golang, and enjoy solving data structures and algorithm problems. You can check out my LeetCode solutions <a href="your-leetcode-link-here">here</a>.</p>
+  </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
-      <h3>Vprofile Kubernetes Setup</h3>
-      <p>Deployed a Java web application on Minikube with Kubernetes...</p>
-      <a href="https://github.com/your-repo">View Project</a>
+      <h3>Emart ecommerce webapp</h3>
+      <p>Constructed a full DevOps Lifecycle on the Emart web application, deploying using cloud technologies and implementing CI/CD pipelines.</p>
+      <p>Check out the Git repository for more information:</p>
+      <a href="https://github.com/Jidetireni/emartapp.git">View Project</a>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
     <p>Feel free to reach out if you're interested in working together!</p>
-    <a href="mailto:jide@example.com">Send an Email</a>
+    <a href="mailto:Jtirenipraise@gmail.com">Send an Email</a>
   </section>
 
   <footer>
     <p>Connect with me on:</p>
     <a href="https://github.com/jidetireni">GitHub</a> |
-    <a href="https://www.linkedin.com/in/jide-jegede">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/jide-jegede-tirenioluwa-088799220/">LinkedIn</a>
   </footer>
 
 </body>
